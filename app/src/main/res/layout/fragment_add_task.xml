@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddTaskFragment">
+
+    <data>
+
+        <variable
+            name="dataVarAddTaskVM"
+            type="com.example.taskk.ViewModelAddTaskF" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity=""
+        android:background="@color/blackLight"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editableFieldEditTaskF"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+            android:background="@color/primaryLightColor"
+            android:gravity="center"
+            android:inputType="textShortMessage|textCapWords|textAutoCorrect"
+            android:hint="@string/enter_a_task"
+            android:text="@={dataVarAddTaskVM.newTaskNameString}"
+            android:textColor="@color/white"
+            tools:text="*******" />
+        <!---->
+
+        <CheckBox
+            android:id="@+id/checkBoxEditTaskF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="@={dataVarAddTaskVM.newTaskStatus}"/>
+          <!--   />-->
+        <!--android:checked="@={dataVarEditTskVM.task.taskStatus}"-->
+
+        <Button
+            android:id="@+id/saveButt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/save"
+            android:onClick="@{()->dataVarAddTaskVM.addTask()}"/>
+        <!-- android:onClick="@{()->dataVarEditTskVM.updateTask()}"-->
+        <!---->
+
+
+    </LinearLayout>
+</layout>

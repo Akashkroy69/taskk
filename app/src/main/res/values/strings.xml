@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Taskk</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_task">save task</string>
+    <string name="delete">Delete</string>
+    <string name="done">Done?</string>
+    <string name="enter_a_task">Enter a task</string>
+    <string name="update">Update</string>
+    <string name="save">Save</string>
+    <string name="add_a_task">add a task</string>
+    <string name="task_you_add_will_appear_here">Task you add will appear here</string>
+    <string name="about">About</string>
+    <string name="about_the_app">This is an app where you can save your task, update and delete them.</string>
+    <string name="technical_details">This app uses many android architecture components like : Fragments, Activity, Navigation Component,MVVM: Room for model and typical ViewModel,
+    Data Binding, ViewBinding, RecyclerView, DiffUtil</string>
+    <string name="technical_detail_title">Technical Details</string>
+    <string name="add_task">Add Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="support">support</string>
+    <string name="home">Home</string>
+</resources>

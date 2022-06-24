@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dataVarEditTskVM"
+            type="com.example.taskk.ViewModelEditTaskFrag" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackLight"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".EditTaskFragment">
+
+        <EditText
+            android:id="@+id/editableFieldEditTaskF"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginTop="200dp"
+            android:background="@color/primaryLightColor"
+            android:textColor="@color/white"
+            android:inputType="textShortMessage|textCapWords|textAutoCorrect"
+            android:text="@={dataVarEditTskVM.task.taskName}"
+            tools:text="*******" />
+
+        <CheckBox
+            android:id="@+id/checkBoxEditTaskF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="@={dataVarEditTskVM.task.taskStatus}"/>
+
+        <Button
+            android:id="@+id/updateButt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="@{()->dataVarEditTskVM.updateTask()}"
+            android:text="@string/update" />
+
+        <Button
+            android:id="@+id/deleteButt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="@{()->dataVarEditTskVM.delete()}"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+</layout>
